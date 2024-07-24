@@ -2,12 +2,15 @@
 
 WealthWise adalah aplikasi API yang dirancang untuk membantu pengguna mengelola keuangan pribadi mereka dengan lebih bijak. Dengan fitur utama—pendapatan, pengeluaran, dan anggaran—WealthWise memungkinkan pengguna untuk memantau dan merencanakan keuangan mereka dengan mudah dan efektif.
 
+## Spring IoC
+![incomeController](https://github.com/user-attachments/assets/119a8e08-c11a-4a8e-b9aa-4bcf5f04ec32)
+
 ## Prasyarat
 
 Sebelum menggunakan API ini, pastikan Anda memiliki:
 - Java 17 atau lebih tinggi
-- Maven 3.8 atau lebih tinggi
-- PostgreSQL
+- Maven 3.6 atau lebih tinggi
+- PostgreSQL 14.12 atau lebih tinggi
 
 ## Instalasi
 
@@ -15,7 +18,7 @@ Untuk menginstal dan menjalankan WealthWise, ikuti langkah-langkah berikut:
 
 1. Clone repositori ini:
     ```bash
-    git clone https://github.com/username/repository.git
+    https://github.com/juanaliyunus/wealth-wise.git
     ```
 
 2. Masuk ke direktori proyek:
@@ -41,6 +44,15 @@ Buka Swagger UI dengan link berikut:
 [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 Setelah aplikasi berjalan, Anda dapat mengakses endpoint API berikut:
+
+### Pengguna (User)
+
+- **GET** `/api/users/{id}`: Mengambil data pengguna berdasarkan ID.
+- **GET** `/api/users/username/{username}`: Mengambil data pengguna berdasarkan username.
+- **POST** `/api/users`: Membuat pengguna baru.
+- **PUT** `/api/users/{id}`: Memperbarui data pengguna yang ada.
+- **DELETE** `/api/users/{id}`: Menghapus data pengguna berdasarkan ID.
+- **GET** `/api/users`: Mengambil semua data pengguna.
 
 ### Anggaran
 
@@ -90,11 +102,3 @@ Setelah aplikasi berjalan, Anda dapat mengakses endpoint API berikut:
 - **GET** `/api/incomes/sum-by-month/user/{userId}`: Mengambil jumlah pendapatan per bulan untuk pengguna tertentu.
 - **GET** `/api/incomes/sum-by-source/user/{userId}`: Mengambil jumlah pendapatan berdasarkan sumber untuk pengguna tertentu.
 
-### Pengguna (User)
-
-- **GET** `/api/users/{id}`: Mengambil data pengguna berdasarkan ID.
-- **GET** `/api/users/username/{username}`: Mengambil data pengguna berdasarkan username.
-- **POST** `/api/users`: Membuat pengguna baru.
-- **PUT** `/api/users/{id}`: Memperbarui data pengguna yang ada.
-- **DELETE** `/api/users/{id}`: Menghapus data pengguna berdasarkan ID.
-- **GET** `/api/users`: Mengambil semua data pengguna.
