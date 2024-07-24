@@ -2,12 +2,20 @@
 
 WealthWise adalah aplikasi API yang dirancang untuk membantu pengguna mengelola keuangan pribadi mereka dengan lebih bijak. Dengan fitur utama—pendapatan, pengeluaran, dan anggaran—WealthWise memungkinkan pengguna untuk memantau dan merencanakan keuangan mereka dengan mudah dan efektif.
 
-## Spring IoC
+## Penjelasan 3 poin penting
+### Spring IoC
+Penerapan IoC (Inversion of Control) dalam proyek ini dilakukan dengan menggunakan anotasi stereotype untuk menyuntikkan dependensi ke dalam kelas-kelas yang memerlukannya. Berikut ini adalah diagram dependency-nya
 ![incomeController](https://github.com/user-attachments/assets/119a8e08-c11a-4a8e-b9aa-4bcf5f04ec32)
+
+### Java Stream
+Java Stream digunakan di kelas "service" untuk menjalankan logika bisnis dengan cara yang deklaratif.
+
+### Native Query
+Native Query digunakan pada kelas repository dengan menggunakan anotasi @Query untuk menulis kueri SQL "native" yang dieksekusi langsung terhadap basis data.
 
 ## Prasyarat
 
-Sebelum menggunakan API ini, pastikan Anda memiliki:
+Sebelum menggunakan API ini, pastikan memiliki:
 - Java 17 atau lebih tinggi
 - Maven 3.6 atau lebih tinggi
 - PostgreSQL 14.12 atau lebih tinggi
